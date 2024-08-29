@@ -1,2 +1,5 @@
 venv/
-biblioteca/
+
+__pycache__/
+
+bib.sqlite3

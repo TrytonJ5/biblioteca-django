@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     # rest_framework.authtoken
     "rest_framework.authtoken",
     # drf-spectacular
-    "drf-spectacular",
+    "drf_spectacular",
+    #cors headers
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
@@ -57,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = 'biblioteca.urls'
@@ -153,3 +156,5 @@ SPECTACULAR_SETTINGS = {
 	"SERVE INCLUDE SCHEMA": False,
 	# OTHER SETTINGS
 }
+
+CORS_ALLOW_ALL_ORIGINS = True
